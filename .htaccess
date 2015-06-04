@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^admin/ - [L,NC]
+RewriteRule ^[a-z0-9/-]+[^/]$ index.php [L,NC]
+
+
+RewriteRule sitemap.xml seo.php [L,NC]
+RewriteRule robots.txt seo.php [L,NC]
+
+RewriteCond %{REQUEST_URI} (^/static/uploads/cache/(.*))$
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} !-f
+RewriteRule ^(.*)$ /resize.php [L]
