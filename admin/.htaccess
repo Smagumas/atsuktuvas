@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^admin/ - [L,NC]
+RewriteRule ^[a-z0-9/-]+[^/]$ admin/index.php [L,NC]
+
+
+
+

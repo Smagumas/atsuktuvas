@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<list paging="400" table="mod_news" orderby="Id" pk="Id">
+        <col name="ID" column="Id"/>
+        <col name="Title(LT)" column="Title_lt" style="width:300px" />
+        <col name="Date Created" column="Date_Created" style="width:300px" />
+        <col name="Visible" column="IsVisible"  editable="1" display="piktograma" real_column="IsVisible" />
+    </list>
+ <edit>
+
+  <area name="Informacija">
+    <table>
+        <row>
+            <col name="Data" column="Date_Created" style="width:300px" display="smalldatetime"/>
+        </row>
+        <row>
+            <col name="Title LT" column="Title_lt" style="width:300px"/>
+        </row>
+	</table>
+	</area>
+     <area name="Aprasymas">
+         <table>
+         <row>
+             <col name="Short Description LT" column="Short_Desc_lt" style="width:300px" display="textareahtml"/>
+         </row>
+         <row>
+             <col name="Description LT" column="Description_lt" style="width:300px" display="textareahtml"/>
+         </row>
+         </table>
+     </area>
+ </edit>
+    <filter_area>
+        <filter_field name="Title LT" column="Title_lt" display="input" system_name="2"/>
+    </filter_area>
+</xml>

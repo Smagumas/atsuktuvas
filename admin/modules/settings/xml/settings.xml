@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xml>
+	<list paging="400" table="cms_translates" orderby="Id" pk="Id">
+        <col name="ID" column="Id"/>
+        <col name="Keystring" column="KeyString" style="width:300px" />
+        <col name="Valuestring" column="ValueString" style="width:300px" />
+        <col name="Language" column="Lang" style="width:300px" />
+    </list>
+ <edit>
+
+  <area name="Informacija">
+    <table>
+        <row>
+            <col name="Keystring" column="KeyString" style="width:300px"/>
+        </row>
+        <row>
+            <col name="Valuestring" column="ValueString" style="width:300px"/>
+        </row>
+        <row>
+            <col name="Language" column="Lang" display="combo"
+                 select="select Short_Title, Title from cms_languages order by Id"
+                 style="width:300px;" />
+        </row>
+	</table>
+	</area>
+ </edit>
+    <filter_area>
+        <filter_field name="Valuestring" column="ValueString" display="input" system_name="2"/>
+        <filter_field name="Language" column="Lang" select="select Short_Title, Title from cms_languages order by Id"
+                      display="combo" system_name="3"/>
+    </filter_area>
+</xml>

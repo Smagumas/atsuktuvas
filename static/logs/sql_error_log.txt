@@ -1,0 +1,720 @@
+Klaida: 2014-09-11 18:59:27
+SELECT count(*) FROM cms_users WHERE IsActive=1 AND Ban=0 AND username='admin' AND pass='tomas'
+
+Unknown column 'username' in 'where clause' 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/index.php 
+
+sesija: Array
+(
+)
+
+
+---
+Klaida: 2014-09-11 19:36:54
+SELECT module, description
+	FROM cms_modules
+	WHERE visible=1 and show_in_menu_top = 1
+	ORDER BY order_by
+
+Unknown column 'description' in 'field list' 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/control_panel.php 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-10 20:15:05
+UPDATE cms_menu
+SET Title = 'Main', Alias = 'main', IsVisible = '1', Content = '<p>Ėjo onute takeliu ir nuvirto, nes <strong>stora</strong></p>'
+ Robots = '0', Meta_keywords = '', Meta_description = ''
+ WHERE Id = '1 '
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Robots = '0', Meta_keywords = '', Meta_description = ''
+ WHERE Id = '1 '' at line 3 
+
+IP: 127.0.0.1
+
+adresas: localhost//admin/content?id=1 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-10 20:21:16
+UPDATE cms_menu SET Title = 'Main', Alias = 'main', IsVisible = '1',
+        Content = '<p>ėjo <em>onutė</em>, ir nuvirto nes'&nbsp;<strong>stora</strong></p>', Robots = '0', Meta_keywords = '',
+        Meta_description = ''
+ WHERE Id = '1 '
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<strong>stora</strong></p>', Robots = '0', Meta_keywords = '',
+        Meta_des' at line 2 
+
+IP: 127.0.0.1
+
+adresas: localhost//admin/content?id=1 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-10 21:32:42
+UPDATE cms_menu SET Title = 'BYB(YS) lol "ol" sd <sdf>  dfs"dsf'ds""f ęč  čęė įė  ę ', Alias = 'byb(ys)-lol-"ol"-sd-<sdf>-dfs"dsf'ds""f-ec-cee-ie-e', IsVisible = '1',
+        Content = '', Robots = '1', Meta_keywords = '',
+        Meta_description = ''
+ WHERE Id = '3 '
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ds""f ęč  čęė įė  ę ', Alias = 'byb(ys)-lol-"ol"-sd-<sdf>-dfs"dsf'ds""f-' at line 1 
+
+IP: 127.0.0.1
+
+adresas: localhost//admin/content?id=3 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-10 21:52:27
+SELECT Id, Title, Mysql_real_escape_String(Alias), Link, Content, IsVisible, Robots, Meta_keywords, Meta_description
+    FROM cms_menu WHERE Id='3'
+
+FUNCTION atsuktuvas_cms.Mysql_real_escape_String does not exist 
+
+IP: 127.0.0.1
+
+adresas: localhost//admin/content?id=3 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-10 21:52:37
+SELECT Id, Title, real_escape_String(Alias), Link, Content, IsVisible, Robots, Meta_keywords, Meta_description
+    FROM cms_menu WHERE Id='3'
+
+FUNCTION atsuktuvas_cms.real_escape_String does not exist 
+
+IP: 127.0.0.1
+
+adresas: localhost//admin/content?id=3 
+
+sesija: Array
+(
+    [User_Login] => admin
+)
+
+
+---
+Klaida: 2014-10-11 21:12:08
+insert into admins_action_log_detailed (UserId, DateTime, `Table`, Pk, `Column`, OldValue,NewValue, action) values (
+'', NOW(), 'cms_translates', '1', 'KeyString', null, 'test', 'insert')
+
+Table 'atsuktuvas_cms.admins_action_log_detailed' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/new 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+)
+
+
+---
+Klaida: 2014-10-11 21:40:46
+insert into admins_action_log_detailed (UserId, DateTime, `Table`, Pk, `Column`, OldValue,NewValue, action) values (
+'', NOW(), 'cms_translates', '1', 'ValueString', 'Testas', 'Testasas', 'update')
+
+Table 'atsuktuvas_cms.admins_action_log_detailed' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/edit?id=1 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1
+)
+
+
+---
+Klaida: 2014-10-12 14:37:51
+insert into admins_action_log_detailed (UserId, DateTime, `Table`, Pk, `Column`, OldValue,NewValue, action) values (
+'', NOW(), 'cms_translates', '1', 'KeyString', null, 'test', 'insert')
+
+Table 'atsuktuvas_cms.admins_action_log_detailed' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/new 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+)
+
+
+---
+Klaida: 2014-10-12 14:37:55
+insert into admins_action_log_detailed (UserId, DateTime, `Table`, Pk, `Column`, OldValue,NewValue, action) values (
+'', NOW(), 'cms_translates', '2', 'KeyString', null, 'test', 'insert')
+
+Table 'atsuktuvas_cms.admins_action_log_detailed' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/new 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+)
+
+
+---
+Klaida: 2014-10-18 16:41:32
+insert into admins_action_log_detailed (UserId, DateTime, `Table`, Pk, `Column`, OldValue,NewValue, action) values (
+'', NOW(), 'cms_translates', '3', 'KeyString', null, 'testas2', 'insert')
+
+Table 'atsuktuvas_cms.admins_action_log_detailed' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/new 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1
+)
+
+
+---
+Klaida: 2014-10-18 16:41:55
+select count(*) from  cms_translates   and ValueString='testas'
+
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='testas'' at line 1 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=testas 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1
+)
+
+
+---
+Klaida: 2014-10-18 17:16:01
+insert into admins_action_log (admin_id, action, query) values ('', 'sukure irasa cms_translates lenteleje','insert into cms_translates (KeyString,ValueString) values  (asdasd,asasasdadsdsa)')
+
+Table 'atsuktuvas_cms.admins_action_log' doesn't exist 
+
+IP: 192.168.0.35
+
+adresas: 192.168.0.35//admin/settings/new 
+
+sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1
+    [sort_mode] => desc
+    [sort_column] => Id
+)
+
+
+---
+                Klaida: 2014-10-18 17:35:17
+                select * from cms_translates where Id=5?id=5
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?id=5' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings/edit?id=5?id=5
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 5?id=5
+    [sort_mode] => desc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:48:49
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:51:45
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:51:48
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:52:46
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:54:06
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:54:09
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:54:43
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:54:45
+                select count(*) from  cms_translates   and ValueString='Testas'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and ValueString='Testas'' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 18:55:30
+                select  Id, KeyString, ValueString, Id as pk from cms_translates  and  ValueString like '%Testas%'  order by id asc limit 0, 1000000
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and  ValueString like '%Testas%'  order by id asc limit 0, 1000000' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?list=&submodule=settings&ValueString=ValueString&2=Testas
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => asc
+    [sort_column] => Id
+)
+
+                ---                Klaida: 2014-10-18 19:07:36
+                select count(*) from  cms_translates WHERE 1=1  where 1=1		
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where 1=1' at line 1
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/settings?filter_name=&filter_value=
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 1?id=1
+    [sort_mode] => desc
+    [sort_column] => ValueString
+)
+
+                ---                Klaida: 2014-11-24 18:40:01
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:38:55
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:39:32
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='4b506c2968184be185f6282f5dcac238'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:39:36
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:46:22
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:46:41
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='a8f5f167f44f4964e6c998dee827110c'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:52:54
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 11:57:18
+                SELECT count(*) as cnt FROM cms_users WHERE IsActive=1 AND Ban=0 AND User='admin' AND Password='2e53d715b9d776b6c45263d31ecd3d87'
+                No database selected
+                IP: ::1
+                adresas: localhost//admin/
+                sesija: Array
+(
+)
+
+                ---                Klaida: 2015-03-25 12:22:20
+                select * from cms_translates where Id=7?id=7
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?id=7' at line 1
+                IP: ::1
+                adresas: localhost//admin/settings/edit?id=7?id=7
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 7?id=7
+)
+
+                ---                Klaida: 2015-03-25 12:22:29
+                select * from cms_translates where Id=7?id=7
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?id=7' at line 1
+                IP: ::1
+                adresas: localhost//admin/settings/edit?id=7?id=7
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 7?id=7
+)
+
+                ---                Klaida: 2015-03-25 13:23:24
+                select count(*) from  cms_translates WHERE 1=1  and ='en'
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '='en'' at line 1
+                IP: ::1
+                adresas: localhost//admin/settings?submodule=settings&ValueString=ValueString&2=&3=en
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => settings
+    [module] => settings
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:47:50
+                insert into mod_news (Title_lt,Short_Desc_lt,Description_lt) values  ('onute','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'&nbsp;ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></strong></p>')
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:50:35
+                insert into mod_news (Short_Desc_lt,Description_lt) values  ('<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>')
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:51:06
+                insert into mod_news (Short_Desc_lt,Description_lt) values  ('<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>')
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:53:19
+                insert into mod_news (Short_Desc_lt,Description_lt) values  ('<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></p>')
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''</strong></p>','<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:54:17
+                insert into mod_news (Short_Desc_lt,Description_lt) values  ()
+                Column count doesn't match value count at row 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:55:00
+                insert into mod_news (Title_lt,Short_Desc_lt,Description_lt) values  (\'asdasdasd\',\'<p>ėjo \"<em>onutė\"</em>, ir <a title=\"\" href=\"wtf\" target=\"\">nuvirto </a>nes \'<strong>stora\'</strong></p>\',\'<p>ėjo \"<em>onutė\"</em>, ir <a title=\"\" href=\"wtf\" target=\"\">nuvirto </a>nes \'<strong>stora\'</strong></p>\')
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'asdasdasd\',\'<p>ėjo \"<em>onutė\"</em>, ir <a title=\"\" href=\"wtf\" targe' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/new
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 8
+)
+
+                ---                Klaida: 2015-03-25 13:59:15
+                update mod_news set Description_lt='<p>ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'&nbsp;ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>nes '<strong>stora'</strong></strong></p>' where Id =1
+                You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''&nbsp;ėjo "<em>onutė"</em>, ir <a title="" href="wtf" target="">nuvirto </a>n' at line 1
+                IP: ::1
+                adresas: localhost//admin/news/edit?id=1
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => news
+    [module] => news
+    [paging] => 10
+    [spalvinti] => 1
+    [RF] => Array
+        (
+            [verify] => RESPONSIVEfilemanager
+            [subfolder] => 
+            [view_type] => 0
+            [sort_by] => name
+            [descending] => 
+            [language] => en
+            [language_file] => lang/lt.php
+        )
+
+)
+
+                ---                Klaida: 2015-03-25 14:03:29
+                update mod_news set visible='1' where Id='1'
+                Unknown column 'visible' in 'field list'
+                IP: ::1
+                adresas: localhost//ajax/admin.php
+                sesija: 
+                ---                Klaida: 2015-03-25 14:17:51
+                SELECT Id, Title, Module FROM cms_modules WHERE IsActive='1' AND Show_InList='1'
+                Unknown column 'Show_InList' in 'where clause'
+                IP: ::1
+                adresas: localhost//admin/content
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => content
+    [module] => content
+    [paging] => 10
+    [spalvinti] => 1
+    [RF] => Array
+        (
+            [verify] => RESPONSIVEfilemanager
+            [subfolder] => 
+            [view_type] => 0
+            [sort_by] => name
+            [descending] => 
+            [language] => en
+            [language_file] => lang/lt.php
+        )
+
+    [sort_mode] => asc
+    [sort_column] => Date_Created
+)
+
+                ---                Klaida: 2015-04-24 16:00:26
+                UPDATE cms_menu SET Title = 'Map', Alias = 'map', IsVisible = '1',
+        Content = '', Robots = '0', Meta_keywords = '',
+        Meta_description = '', Module_Id = '5', Templates_Id = '2'
+        WHERE Id = '10 '
+                Unknown column 'Templates_Id' in 'field list'
+                IP: 192.168.0.35
+                adresas: 192.168.0.35//admin/content?id=10
+                sesija: Array
+(
+    [User_Login] => admin
+    [submodule] => content
+    [module] => content
+    [paging] => 10
+)
+
+                ---
